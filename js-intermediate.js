@@ -34,22 +34,28 @@ var bicycle = {
 	}
 }
 
-// Log the type of bicycle:
-console.log(bicycle.type)
+// // Log the type of bicycle:
+// console.log(bicycle.type)
 
-// Log the bell:
-console.log(bicycle.gear[2])
+// // Log the bell:
+// console.log(bicycle.gear[2])
 
-// Log the PSI:
-console.log()
+// // Log the PSI:
+// console.log(bicycle.wheels.specs[2])
 
 
 // // 4. Write a function that takes in an array and returns an array in reverse order.
 
 // var originalArray1 = [1, 2, 3, 4, 5, 6, 7]
-// // Expected output: [7, 6, 5, 4, 3, 2, 1],
+// // // Expected output: [7, 6, 5, 4, 3, 2, 1],
 // var originalArray2 = ["9", "1", "o", "h", "c", "e"]
-// // Expected output: ["e", "c", "h", "o", "1", "9"]
+// // // Expected output: ["e", "c", "h", "o", "1", "9"]
+
+// const reverseArray = (array) => array.reverse()
+	
+
+// console.log(reverseArray(originalArray1))
+// console.log(reverseArray(originalArray2))
 
 
 
@@ -63,21 +69,47 @@ console.log()
 //     })
 // })
 
+const multTwo = (array) => {
+	return array.map(number => number * 2)
+}
+
+console.log(multTwo([3, 4, 5]))
+console.log(multTwo([23, -9, 0]))
+console.log(multTwo([4.5, -4.5, 12]))
+
 
 
 // // 6. Write a function called letterCounter that logs the number of times the letter "l" appears in ourString.
 
-// var ourString = "Hello Learn Students!"
+var ourString = "Hello Learn Students!"
 // // Expected output: 3
+
+const countL = (string) => {
+	return string.toLowerCase().split('').filter(letter => letter === 'l').length
+}
+
+console.log(countL(ourString))
 
 
 
 // // 7. Create a function that takes in a string of a single word and returns the middle letter of the word. If the word is an even number of letters, return the two middle letters.
 
-// var middleLetters1 = "hello"
+var middleLetters1 = "hello"
 // // Expected output: “l”
-// var middleLetters2 = "rhinoceros"
+var middleLetters2 = "rhinoceros"
 // // Expected output: “oc”
+
+const findMiddleLetter = (string) => {
+	let stringArray = string.split('');
+	while (stringArray.length > 2) {
+		stringArray.pop();
+		stringArray.shift();
+	}
+	return stringArray.join('')
+}
+
+console.log(findMiddleLetter(middleLetters1))
+console.log(findMiddleLetter(middleLetters2))
 
 
 
@@ -90,14 +122,18 @@ console.log()
 // // 9. Use object destructuring to return the nested values of specs. Expected output: 4, "manual"
 // // Don't overthink this one, it's just destrcturing practice.
 
-// var myCar = {
-//   make: "VW",
-//   model: "Jetta",
-//   specs: {
-//     doors: 4,
-//     transmission: "manual",
-//   }
-// }
+var myCar = {
+  make: "VW",
+  model: "Jetta",
+  specs: {
+    doors: 4,
+    transmission: "manual",
+  }
+}
+
+const {doors, transmission} = myCar.specs
+
+console.log(doors, transmission)
 
 
 
