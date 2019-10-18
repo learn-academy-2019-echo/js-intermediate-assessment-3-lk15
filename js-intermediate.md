@@ -6,15 +6,25 @@ Answer the following questions. First, without external resources. Challenge you
 1. What are the HTTP verbs? Which CRUD action corresponds to each verb?
 
   Your answer:
+  Get - Read
+  Post - Create
+  Delete - Delete
 
   Researched answer:
+  Get - read
+  Post - create
+  Put - update
+  Patch - update
+  Delete - delete
 
 
 2. Why would you use object destructuring?
 
-  Your answer:
+  Your answer: To make code easier to read
 
-  Researched answer:
+  Researched answer: Object destructuring allows us to use more compact syntax. It can be useful for: 
+  - variable assignment
+  
 
 
 
@@ -42,9 +52,10 @@ Answer the following questions. First, without external resources. Challenge you
 
 1. How do you link a CSS file to your HTML page?
 
-  Your answer:
+  Your answer: In the head section you would link to your stylesheet
 
   Researched answer:
+  <link href="cssfilename.css" rel="stylesheet" type="text/css">
 
 
 2. What is the difference between a div and a span?
@@ -63,16 +74,33 @@ Answer the following questions. First, without external resources. Challenge you
 
 4. Name 4 semantic HTML tags.
 
-  Your answer:
+  Your answer: <header> <footer> <section> <aside>
 
   Researched answer:
+  <article>
+  <aside>
+  <details>
+  <figcaption>
+  <figure>
+  <footer>
+  <header>
+  <main>
+  <mark>
+  <nav>
+  <section>
+  <summary>
+  <time>
 
 
 5. What are three options for creating responsive design?
 
   Your answer:
+  - using media queries
+  - flexible images and content
+  
 
   Researched answer:
+  - Use a Framework such as Bootstrap
 
 
 ### STRETCH: The following questions are potential interview questions. First, try to answer each question on your own then Google the answer to further your knowledge.

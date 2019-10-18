@@ -4,21 +4,36 @@
 // Be sure to use all given test cases
 
 // 1. Write a function called getFib that returns the first 10 numbers of the Fibonacci sequence in an array. Expected output: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-
+const getFib = () => {
+	let newArray = [];
+	let nextElement;
+	for (let i = 0; i < 10; i++) {
+		if (i < 2) {
+			nextElement = 1;
+		}
+		else {
+			nextElement = newArray[newArray.length-1] + newArray[newArray.length -2]
+		}
+		newArray.push(nextElement)
+	}
+	return newArray;
+}
+	
+console.log(getFib())
 
 
 
 // // 2. Write a function called oddChecker that takes in an array and returns a new array of only odd numbers.
 
-// var fullArr1 = [4, 9, 0, "7", 8, true, "hey", 7, 199, -9, false, "hola"]
-// // Expected output: [9, 7, 199, -9]
-// var fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
-// // Expected output: [7, 23, -823]
+var fullArr1 = [4, 9, 0, "7", 8, true, "hey", 7, 199, -9, false, "hola"]
+// Expected output: [9, 7, 199, -9]
+var fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
+// Expected output: [7, 23, -823]
 
-// const oddChecker = (array) => array.filter(element => typeof element === 'number' && element % 2 !== 0) 
+const oddChecker = (array) => array.filter(element => typeof element === 'number' && element % 2 !== 0) 
 
-// console.log(oddChecker(fullArr1))
-// console.log(oddChecker(fullArr2))
+console.log(oddChecker(fullArr1))
+console.log(oddChecker(fullArr2))
 
 
 
@@ -34,28 +49,28 @@ var bicycle = {
 	}
 }
 
-// // Log the type of bicycle:
-// console.log(bicycle.type)
+// Log the type of bicycle:
+console.log(bicycle.type)
 
-// // Log the bell:
-// console.log(bicycle.gear[2])
+// Log the bell:
+console.log(bicycle.gear[2])
 
-// // Log the PSI:
-// console.log(bicycle.wheels.specs[2])
+// Log the PSI:
+console.log(bicycle.wheels.specs[2])
 
 
 // // 4. Write a function that takes in an array and returns an array in reverse order.
 
-// var originalArray1 = [1, 2, 3, 4, 5, 6, 7]
-// // // Expected output: [7, 6, 5, 4, 3, 2, 1],
-// var originalArray2 = ["9", "1", "o", "h", "c", "e"]
-// // // Expected output: ["e", "c", "h", "o", "1", "9"]
+var originalArray1 = [1, 2, 3, 4, 5, 6, 7]
+// // Expected output: [7, 6, 5, 4, 3, 2, 1],
+var originalArray2 = ["9", "1", "o", "h", "c", "e"]
+// // Expected output: ["e", "c", "h", "o", "1", "9"]
 
-// const reverseArray = (array) => array.reverse()
+const reverseArray = (array) => array.reverse()
 	
 
-// console.log(reverseArray(originalArray1))
-// console.log(reverseArray(originalArray2))
+console.log(reverseArray(originalArray1))
+console.log(reverseArray(originalArray2))
 
 
 
@@ -69,13 +84,13 @@ var bicycle = {
 //     })
 // })
 
-const multTwo = (array) => {
-	return array.map(number => number * 2)
-}
+// const multTwo = (array) => {
+// 	return array.map(number => number * 2)
+// }
 
-console.log(multTwo([3, 4, 5]))
-console.log(multTwo([23, -9, 0]))
-console.log(multTwo([4.5, -4.5, 12]))
+// console.log(multTwo([3, 4, 5]))
+// console.log(multTwo([23, -9, 0]))
+// console.log(multTwo([4.5, -4.5, 12]))
 
 
 
@@ -117,6 +132,25 @@ console.log(findMiddleLetter(middleLetters2))
 // // 8. Write a program to get the area of a sphere using object classes. Create three spheres with different radi as test cases. Area of a sphere =  4πr^2 (four pi r squared)
 
 
+class Sphere{
+  constructor(radius){
+    this.radius = radius
+  }
+
+  getArea(){
+    return 4 * Math.PI * Math.pow(this.radius, 2) 
+  }
+}
+
+var smallSphere = new Sphere(2)
+var mediumSphere = new Sphere(5)
+var largeSphere = new Sphere(10)
+
+console.log(smallSphere.getArea())
+console.log(mediumSphere.getArea())
+console.log(largeSphere.getArea())
+
+
 
 
 // // 9. Use object destructuring to return the nested values of specs. Expected output: 4, "manual"
@@ -139,9 +173,25 @@ console.log(doors, transmission)
 
 // // 10. STRETCH: Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
 
-// var numbersToAdd1 = [2, 4, 45, 9]
-// // Excpected output: [2, 6, 51, 60]
-// var numbersToAdd2 = [0, 7, -8, 12]
-// // Expected output: [0, 7, -1, 11]
-// var numbersToAdd3 = []
+var numbersToAdd1 = [2, 4, 45, 9]
+// Excpected output: [2, 6, 51, 60]
+var numbersToAdd2 = [0, 7, -8, 12]
+// Expected output: [0, 7, -1, 11]
+var numbersToAdd3 = []
 // // Expected output: []
+
+const calculateAccumulatingSum = (array) => {
+	let newArray = [array[0]];
+	for (let i = 1; i < array.length; i++) {
+		for (let j = 0; j < newArray.length; j++) {
+			add = (sum, num) => sum + num;
+		}
+		newArray.push(array[i] + array.reduce(add)
+		
+		
+	}
+	return newArray;
+
+}
+
+console.log(calculateAccumulatingSum(numbersToAdd1))
