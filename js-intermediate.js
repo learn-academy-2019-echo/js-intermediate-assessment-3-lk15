@@ -19,7 +19,7 @@ const getFib = () => {
 	return newArray;
 }
 	
-console.log(getFib())
+// console.log(getFib())
 
 
 
@@ -32,8 +32,8 @@ var fullArr2 = ["hello", 7, 23, -823, false, 78, null, "67", 6, "number"]
 
 const oddChecker = (array) => array.filter(element => typeof element === 'number' && element % 2 !== 0) 
 
-console.log(oddChecker(fullArr1))
-console.log(oddChecker(fullArr2))
+// console.log(oddChecker(fullArr1))
+// console.log(oddChecker(fullArr2))
 
 
 
@@ -69,24 +69,24 @@ var originalArray2 = ["9", "1", "o", "h", "c", "e"]
 const reverseArray = (array) => array.reverse()
 	
 
-console.log(reverseArray(originalArray1))
-console.log(reverseArray(originalArray2))
+// console.log(reverseArray(originalArray1))
+// console.log(reverseArray(originalArray2))
 
 
 
 // // 5. Write the code that would make this test pass.
 
-// describe("multTwo", () => {
-//     test ("returns an array with all the numbers multiplied by two", () => {
-//         expect(multTwo([3, 4, 5])).toEqual([6, 8, 10])
-//         expect(multTwo([23, -9, 0])).toEqual([46, -18, 0])
-//         expect(multTwo([4.5, -4.5, 12])).toEqual([9, -9, 24])
-//     })
-// })
+describe("multTwo", () => {
+    test ("returns an array with all the numbers multiplied by two", () => {
+        expect(multTwo([3, 4, 5])).toEqual([6, 8, 10])
+        expect(multTwo([23, -9, 0])).toEqual([46, -18, 0])
+        expect(multTwo([4.5, -4.5, 12])).toEqual([9, -9, 24])
+    })
+})
 
-// const multTwo = (array) => {
-// 	return array.map(number => number * 2)
-// }
+const multTwo = (array) => {
+	return array.map(number => number * 2)
+}
 
 
 
@@ -101,7 +101,7 @@ const countL = (string) => {
 	return string.toLowerCase().split('').filter(letter => letter === 'l').length
 }
 
-console.log(countL(ourString))
+// console.log(countL(ourString))
 
 
 
@@ -121,8 +121,8 @@ const findMiddleLetter = (string) => {
 	return stringArray.join('')
 }
 
-console.log(findMiddleLetter(middleLetters1))
-console.log(findMiddleLetter(middleLetters2))
+// console.log(findMiddleLetter(middleLetters1))
+// console.log(findMiddleLetter(middleLetters2))
 
 
 
@@ -144,9 +144,9 @@ var smallSphere = new Sphere(2)
 var mediumSphere = new Sphere(5)
 var largeSphere = new Sphere(10)
 
-console.log(smallSphere.getArea())
-console.log(mediumSphere.getArea())
-console.log(largeSphere.getArea())
+// console.log(smallSphere.getArea())
+// console.log(mediumSphere.getArea())
+// console.log(largeSphere.getArea())
 
 
 
@@ -200,7 +200,7 @@ const calculateAccumulatingSum = (array) => {
 	return array;
 }
 
-console.log(calculateAccumulatingSum(numbersToAdd1))
-console.log(calculateAccumulatingSum(numbersToAdd2))
-console.log(calculateAccumulatingSum(numbersToAdd3))
+// console.log(calculateAccumulatingSum(numbersToAdd1))
+// console.log(calculateAccumulatingSum(numbersToAdd2))
+// console.log(calculateAccumulatingSum(numbersToAdd3))
 
