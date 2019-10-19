@@ -88,9 +88,7 @@ console.log(reverseArray(originalArray2))
 // 	return array.map(number => number * 2)
 // }
 
-// console.log(multTwo([3, 4, 5]))
-// console.log(multTwo([23, -9, 0]))
-// console.log(multTwo([4.5, -4.5, 12]))
+
 
 
 
@@ -180,18 +178,29 @@ var numbersToAdd2 = [0, 7, -8, 12]
 var numbersToAdd3 = []
 // // Expected output: []
 
-const calculateAccumulatingSum = (array) => {
-	let newArray = [array[0]];
-	for (let i = 1; i < array.length; i++) {
-		for (let j = 0; j < newArray.length; j++) {
-			add = (sum, num) => sum + num;
-		}
-		newArray.push(array[i] + array.reduce(add)
-		
-		
-	}
-	return newArray;
+// const calculateAccumulatingSum = (array) => {
+// 		let newArray = [];
+// 		if (array.length > 0) {
+// 			newArray.push(array[0])
+// 			array.shift();
+// 		}
+// 		let accumulatingSum;
+// 		while (array.length > 0) {
+// 			accumulatingSum = array[0] + newArray[newArray.length -1]
+// 			newArray.push(accumulatingSum)
+// 			array.shift()
+// 		}
+// 		return newArray;
+// }
 
+const calculateAccumulatingSum = (array) => {
+	for (let i = 1; i < array.length; i++) {
+		array[i] += array[i-1];
+	}
+	return array;
 }
 
 console.log(calculateAccumulatingSum(numbersToAdd1))
+console.log(calculateAccumulatingSum(numbersToAdd2))
+console.log(calculateAccumulatingSum(numbersToAdd3))
+
